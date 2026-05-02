@@ -38,15 +38,25 @@ body {
   -webkit-backdrop-filter: blur(5px);
 }
 
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 .conteudo::before {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 2px;
-
+  padding: 3px;
   border-radius: inherit;
 
-  background: linear-gradient(-90deg, #00f0ff, #ff2ed1);
+  background: conic-gradient(
+    from var(--angle),
+    #00f0ff,
+    #ff2ed1,
+    #00f0ff
+  );
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -55,6 +65,14 @@ body {
   mask-composite: exclude;
 
   pointer-events: none;
+
+  animation: girarBorda 4s linear infinite;
+}
+
+@keyframes girarBorda {
+  to {
+    --angle: 360deg;
+  }
 }
 
 .header {
