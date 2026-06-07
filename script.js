@@ -9,3 +9,4 @@
       loader.style.display = "none";
     }, 500);
   });
+  
