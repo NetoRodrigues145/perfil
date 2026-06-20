@@ -2,11 +2,14 @@
   --cyan: #00f0ff;
   --pink: #ff2ed1;
 }
+
+html {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Space Grotesk", sans-serif;
-  font-family: "Orbitron", sans-serif;
 }
 
 /* TELA DE LOADING */
@@ -69,8 +72,8 @@ body {
 
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 }
 
 @property --angle {
@@ -123,7 +126,7 @@ body {
   background: conic-gradient(from var(--angle), #00f0ff, #ff2ed1, #00f0ff);
   opacity: 0.8;
   z-index: -1;
-  filter: blur(25px);
+  filter: blur(17px);
   animation: glow-pulse 3s ease-in-out infinite;
   animation: girarBorda 4s linear infinite;
 }
@@ -196,7 +199,6 @@ body {
   border-radius: 20px;
   opacity: 0.1;
   z-index: -1;
-  filter: blur(30px);
   pointer-events: none;
 }
 
@@ -210,6 +212,7 @@ body {
   gap: 5px;
   animation: scroll 20s linear infinite;
   width: fit-content;
+  font-family: "Orbitron", sans-serif;
 }
 
 .carousel-track:hover {
@@ -261,6 +264,13 @@ body {
 }
 
 /* RESPONSIVO */
+
+@media (max-width: 768px) {
+  .conteudo {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
 
 /* Mobile Extra (até 375px) */
 @media (max-width: 375px) {
