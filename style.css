@@ -1,7 +1,7 @@
 :root {
   --cyan: #00f0ff;
   --pink: #ff2ed1;
-  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -26,11 +26,7 @@ body {
   height: 60px;
   border-radius: 50%;
 
-  background: conic-gradient(
-    #00f0ff,
-    #ff2ed1,
-    #00f0ff
-  );
+  background: conic-gradient(#00f0ff, #ff2ed1, #00f0ff);
 
   -webkit-mask: radial-gradient(farthest-side, transparent 60%, black 61%);
   mask: radial-gradient(farthest-side, transparent 60%, black 61%);
@@ -59,7 +55,6 @@ body {
 /* Conteudo */
 .conteudo {
   width: 580px;
-  height: 900px;
   margin-top: 30px;
   margin-bottom: 30px;
   position: relative;
@@ -91,12 +86,7 @@ body {
   padding: 3px;
   border-radius: inherit;
 
-  background: conic-gradient(
-    from var(--angle),
-    #00f0ff,
-    #ff2ed1,
-    #00f0ff
-  );
+  background: conic-gradient(from var(--angle), #00f0ff, #ff2ed1, #00f0ff);
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -126,16 +116,11 @@ body {
 
 /* Brilho principal com gradiente radial */
 .avatar::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -10px;
   border-radius: 50%;
-  background: conic-gradient(
-    from var(--angle),
-    #00f0ff,
-    #ff2ed1,
-    #00f0ff
-  );
+  background: conic-gradient(from var(--angle), #00f0ff, #ff2ed1, #00f0ff);
   opacity: 0.8;
   z-index: -1;
   filter: blur(25px);
@@ -147,15 +132,17 @@ body {
 .avatar img {
   border-radius: 50%;
   border: 2px solid rgba(0, 240, 255, 0.3);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2), 
-              0 0 40px rgba(255, 46, 209, 0.2);
+  box-shadow:
+    0 0 20px rgba(0, 240, 255, 0.2),
+    0 0 40px rgba(255, 46, 209, 0.2);
   position: relative;
   z-index: 1;
 }
 
 /* Animação opcional: pulso de brilho */
 @keyframes glow-pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.8;
     filter: blur(20px);
   }
@@ -165,113 +152,113 @@ body {
   }
 }
 
-.header .about{
+.header .about {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 14px;
   text-align: center;
-  color: #9CA3AF;
+  color: #9ca3af;
   letter-spacing: 1px;
 }
 
 /*Redes sociais  */
- .social-medias.minimal i {
-    background: transparent;
-    border: none;
-    font-size: 40px;
-    width: auto;
-    color: #FCEE09;
-  }
+.social-medias.minimal i {
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  width: auto;
+  color: #fcee09;
+}
 
-  .social-medias.minimal i:hover {
-    color: var(--pink);
-    text-shadow: 0 0 25px rgba(255, 46, 209, 0.9);
-    transition: ease-in 0.3s;
-    cursor: pointer;
-  }
+.social-medias.minimal i:hover {
+  color: var(--pink);
+  text-shadow: 0 0 25px rgba(255, 46, 209, 0.9);
+  transition: ease-in 0.3s;
+  cursor: pointer;
+}
 
 /* hobbies */
 
-    .hobbies-section {
-      width: 100%;
-    }
+.hobbies-section {
+  width: 100%;
+}
 
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      border-radius: 16px;
-    }
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
 
-    .carousel-container::before {
-      content: '';
-      position: absolute;
-      inset: -30px;
-      border-radius: 20px;
-      opacity: 0.1;
-      z-index: -1;
-      filter: blur(30px);
-      pointer-events: none;
-    }
+.carousel-container::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 20px;
+  opacity: 0.1;
+  z-index: -1;
+  filter: blur(30px);
+  pointer-events: none;
+}
 
-    .carousel-wrapper {
-      overflow: hidden;
-      padding: 5px;
-    }
+.carousel-wrapper {
+  overflow: hidden;
+  padding: 5px;
+}
 
-    .carousel-track {
-      display: flex;
-      gap: 5px;
-      animation: scroll 20s linear infinite;
-      width: fit-content;
-    }
+.carousel-track {
+  display: flex;
+  gap: 5px;
+  animation: scroll 20s linear infinite;
+  width: fit-content;
+}
 
-    .carousel-track:hover {
-      animation-play-state: paused;
-    }
+.carousel-track:hover {
+  animation-play-state: paused;
+}
 
-    .hobby-item {
-      flex: 0 0 200px;
-      height: 87px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: rgba(0, 240, 255, 0.05);
-      border: 1px solid rgba(0, 240, 255, 0.2);
-      border-radius: 12px;
-      padding: 20px;
-      transition: all 0.3s ease;
-    }
+.hobby-item {
+  flex: 0 0 200px;
+  height: 87px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0, 240, 255, 0.05);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
 
-    .hobby-item:hover {
-      background: rgba(0, 240, 255, 0.15);
-      border-color: rgba(0, 240, 255, 0.4);
-      transform: translateY(-5px);
-    }
+.hobby-item:hover {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: rgba(0, 240, 255, 0.4);
+  transform: translateY(-5px);
+}
 
-    .hobby-icon {
-      font-size: 35px;
-      background: linear-gradient(135deg, var(--cyan), var(--pink));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+.hobby-icon {
+  font-size: 35px;
+  background: linear-gradient(135deg, var(--cyan), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-    .hobby-name {
-      font-size: 14px;
-      font-weight: 600;
-      color: #9CA3AF;
-    }
+.hobby-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #9ca3af;
+}
 
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 /* RESPONSIVO */
 
